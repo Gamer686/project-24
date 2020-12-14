@@ -14,6 +14,9 @@ rectMode(CENTER);
 	Engine.run(engine);
 
 	dustbin = new DustBin(720,390,100,10);
+	dustbin2 = new DustBin(700,300,100,10);
+	dustbin3 = new DustBin(600,300,100,10);
+	dustbin4 = new DustBin(620,390,100,10);
 	paper = new Paper(100,300,10);
 	ground= Bodies.rectangle(width/2,400,10,{isStatic:true});
      World.add(world,ground);
@@ -23,6 +26,9 @@ function draw() {
    background("black");
    rectMode(CENTER);
    dustbin.display();
+   dustbin2.display();
+   dustbin3.display();
+   dustbin4.display();
    paper.display();
   
    drawSprites();
