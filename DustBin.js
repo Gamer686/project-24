@@ -5,16 +5,33 @@ class DustBin{
         
         }
        
-        this.body1 = bodies.rectangle(x,y,width,height,options);
+        this.body1 = Bodies.rectangle(x,y,width,height,options);
         World.add(world,this.body1);
-        this.body1 = bodies.rectangle((x=(width/2)),(y=(height*2)),height,width/2,options);
+        this.body1 = Bodies.rectangle((x=(width/2)),(y=(height*2)),height,width/2,options);
         World.add(world,this.body1);
-        this.body2 = bodies.rectangle(x,y,width,height,options);
+        this.body2 = Bodies.rectangle(x,y,width,height,options);
         World.add(world,this.body2);
-        this.body1 = bodies.rectangle((x=(width/2)),(y=(height*2)),height,width/2,options);
+        this.body1 = Bodies.rectangle((x=(width/2)),(y=(height*2)),height,width/2,options);
         World.add(world,this.body1);
+        this.body3 = Bodies.rectangle(x,y,width,height,options);
+        World.add(world,this.body3);
+        this.body3 = Bodies.rectangle((x=(width/2)),(y=(height*2)),height,width/2,options);
+        World.add(world,this.body3);
+        this.body4 = Bodies.rectangle(x,y,width,height,options);
+        World.add(world,this.body4);
+        this.body4 = Bodies.rectangle((x=(width/2)),(y=(height*2)),height,width/2,options);
+        World.add(world,this.body4);
+
+        
         this.body1.width = width
         this.body1.height= height
+        this.body2.width = width
+        this.body2.height= height
+        this.body3.width = width
+        this.body3.height= height
+        this.body4.width = width
+        this.body4.height= height
+        
     
 
     }
@@ -23,7 +40,8 @@ fill("white");
 rect(this.body1.position.x,this.body1.position.y,this.body1.width,this.body1.height)
 rect((this.body1.position.x-(this.body1.width/2)),(this.body1.position.y-(this.body1.height*(2*(this.body1.width/100)))),this.body1.heigth,this.body1.width/2)
 rect((this.body2.position.x-(this.body2.width/2)),(this.body2.position.y-(this.body2.height*(2*(this.body2.width/100)))),this.body2.heigth,this.body2.width/2)
-
+rect((this.body2.position.x-(this.body3.width/2)),(this.body3.position.y-(this.body3.height*(2*(this.body3.width/100)))),this.body3.heigth,this.body3.width/2)
+rect((this.body2.position.x-(this.body4.width/2)),(this.body4.position.y-(this.body4.height*(2*(this.body4.width/100)))),this.body4.heigth,this.body4.width/2)
 }
 }
 
