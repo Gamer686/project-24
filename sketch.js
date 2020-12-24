@@ -13,31 +13,35 @@ rectMode(CENTER);
 	world = engine.world;
 	Engine.run(engine);
 
-	dustbin = new DustBin(720,390,100,10);
-	dustbin2 = new DustBin(700,300,100,10);
-	dustbin3 = new DustBin(600,300,100,10);
-	dustbin4 = new DustBin(620,390,100,10);
+	leftWallDustbin = new DustBin(550,620,20,100);
+	rightWallDustbin = new DustBin(670,620,20,100);
+	bottomWallDustbin = new DustBin(610,660,100,20);
+	//dustbin4 = new DustBin(620,390,100,10);
 	paper = new Paper(100,300,10);
-	ground= Bodies.rectangle(width/2,400,10,{isStatic:true});
-     World.add(world,ground);
+	ground= Bodies.rectangle(width/2,680,800,20,{isStatic:true});
+	 World.add(world,ground);
+	/* render = Matter.Render.create({element: document.body,engine:engine,                    
+		options:{width:800,height:700}});
+		Matter.Render.run(render);*/
 }
 
 function draw() {
    background("black");
    rectMode(CENTER);
-   dustbin.display();
-   dustbin2.display();
-   dustbin3.display();
-   dustbin4.display();
+   rect(ground.position.x,ground.position.y,800,20);
+   leftWallDustbin.display();
+   rightWallDustbin.display();
+   bottomWallDustbin.display();
+   //dustbin4.display();
    paper.display();
   
    drawSprites();
-   keyPressed();
+
  
 }
 function keyPressed(){
 	if(keyCode===UP_ARROW){
-		Matter.body.applyForce(paper.body.position,{x:12,y:-13});
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:10,y:-15});
 
 	}
 }
